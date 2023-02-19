@@ -1,6 +1,9 @@
 import Page from '../../components/Page';
 import HomeImage from '../../assets/img/background.jpg';
+import Investment from './components/Investment';
+
 import BombFinanceSummary from './components/BombFinanceSummary';
+import Label from '../../components/Label';
 import { createGlobalStyle } from 'styled-components';
 // import Button from '../../components/Button';
 import {
@@ -8,6 +11,7 @@ import {
   Button,
   Card,
   CardContent,
+  CardActions,
   Grid,
   Paper,
   Table,
@@ -16,6 +20,9 @@ import {
   TableHead,
   TableRow,
 } from '@material-ui/core';
+import { borderRadius, display, fontSize } from '@material-ui/system';
+import BondFarms from './components/BondFarms';
+import Bonds from './components/Bonds';
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -29,44 +36,9 @@ const Dashboard = () => {
     <Page>
       <BackgroundImage />
       <BombFinanceSummary />
-      <Grid container>
-        <Grid item>
-          <div>
-            <Button
-              style={{
-                backgroundColor: '#00ADE8',
-                padding: '2px 15rem',
-                border: '1px solid red',
-                fontWeight: 'bold',
-                fontSize: '1.2rem',
-                color: 'white',
-              }}
-              className=""
-            >
-              Invest Now
-            </Button>
-          </div>
-          <Grid style={{ display: 'flex' }}>
-            <Button
-              style={{
-                backgroundColor: '#00ADE8',
-                padding: '2px 5rem',
-                border: '1px solid red',
-                fontWeight: 'bold',
-                fontSize: '1.2rem',
-                color: 'white',
-              }}
-            >
-              Chat on Discord
-            </Button>
-            <Button>Read Docs</Button>
-          </Grid>
-        </Grid>
-        <Grid item>
-          <div>A</div>
-          <div>B</div>
-        </Grid>
-      </Grid>
+      <Investment />
+      <BondFarms />
+      <Bonds />
     </Page>
   );
 };
