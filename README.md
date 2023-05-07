@@ -1,8 +1,5 @@
 # 🪦Welcome to the Bomb.money ecosystem🪦
 
-Thanks for taking the time to contribute!
-You can start by reading our [Contribution guidelines](CONTRIBUTING.md) first.
-
 ## Setup
 
 Install the dependencies
